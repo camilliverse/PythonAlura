@@ -23,7 +23,6 @@ def exibir_opcoes():
 def finalizar_programa():
     exibir_subtitulos('-- Finalizando o app --\n')
     
- 
 def voltar_ao_menu_principal(): 
     input('\nDigite uma tecla para voltar ao menu ')
     main()
@@ -51,7 +50,9 @@ def Listar_restaurantes():
 
     for restaurante in restaurantes: 
         nome_restaurante = restaurante['nome']
-        print(f'- {nome_restaurante}')
+        categoria = restaurante['categoria']
+        ativo = restaurante['ativo']
+        print(f'- {nome_restaurante} | {categoria} | {ativo}')
 
     voltar_ao_menu_principal()
 

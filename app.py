@@ -1,6 +1,8 @@
 import os
 
-restaurantes = ['Pizza', 'Sushi']
+restaurantes = [
+{'nome': 'Praça', 'categoria': 'Japonesa', 'ativo': False}, {'nome': 'Pizza Suprema', 'categoria': 'Italizana', 'ativo': True}, 
+{'nome': 'Cantina', 'categoria': 'Arabe', 'ativo': False}]
 
 def exibir_nome_programa():
     print("""
@@ -19,20 +21,24 @@ def exibir_opcoes():
     print('4. Sair\n')
 
 def finalizar_programa():
-    os.system('cls' if os.name == 'nt' else 'clear')
-    print('Finalizando o app\n')
-
+    exibir_subtitulos('-- Finalizando o app --\n')
+    
+ 
 def voltar_ao_menu_principal(): 
     input('\nDigite uma tecla para voltar ao menu ')
     main()
+
+def exibir_subtitulos(texto):
+    os.system('cls' if os.name == 'nt' else 'clear')
+    print(texto)
 
 def opcao_invalida():
     print('Opção inválida')
     voltar_ao_menu_principal()
 
 def cadastrar_novo_restaurante():
-    os.system('cls' if os.name == 'nt' else 'clear')
-    print('--- Cadastro de novos restaurantes ---\n')
+    exibir_subtitulos('--- Cadastro de novos restaurantes ---\n')
+  
     nome_restaurante = input('Digite o nome do restaurante que deseja cadastrar: ')
     restaurantes.append(nome_restaurante)
     print(f'O restaurante {nome_restaurante} foi cadastrado com sucesso!')
@@ -40,16 +46,14 @@ def cadastrar_novo_restaurante():
     main()
 
 def Listar_restaurantes(): 
-    os.system('cls' if os.name == 'nt' else 'clear')
-    print('--- Listar restaurantes ---\n')
+    exibir_subtitulos('--- Listar restaurantes ---\n')
+    print()
 
     for restaurante in restaurantes: 
-        print(f'.{restaurante}')
+        nome_restaurante = restaurante['nome']
+        print(f'- {nome_restaurante}')
 
     voltar_ao_menu_principal()
-   
-
-
 
 def escolher_opcao():
     try:

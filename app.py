@@ -22,10 +22,13 @@ def finalizar_programa():
     os.system('cls' if os.name == 'nt' else 'clear')
     print('Finalizando o app\n')
 
+def voltar_ao_menu_principal(): 
+    input('\nDigite uma tecla para voltar ao menu ')
+    main()
+
 def opcao_invalida():
     print('Opção inválida')
-    input('Digite uma tecla para votar ao menu principal: ')
-    main()
+    voltar_ao_menu_principal()
 
 def cadastrar_novo_restaurante():
     os.system('cls' if os.name == 'nt' else 'clear')
@@ -43,8 +46,8 @@ def Listar_restaurantes():
     for restaurante in restaurantes: 
         print(f'.{restaurante}')
 
-    input('\nDigite uma tecla para voltar ao menu pricipal')
-    main()
+    voltar_ao_menu_principal()
+   
 
 
 

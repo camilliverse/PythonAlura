@@ -4,7 +4,10 @@ class restaurante:
     ativo = False
 
 restaurante_mushu = restaurante
+restaurante_mushu.nome = 'mushu'
+restaurante_mushu.categoria = 'chinesa'
+
 restaurante_config = restaurante
 
 restaurantes = [restaurante_mushu , restaurante_config]
-print(restaurante)
+print(restaurante_mushu.ativo)

@@ -3,7 +3,7 @@ class musica:
     artista = ' '
     ducarao = int
 
-musica1 = Musica()
+musica1 = musica()
 musica1.nome = 'Bohemian Rhapsody'
 musica1.duracao = 355
 

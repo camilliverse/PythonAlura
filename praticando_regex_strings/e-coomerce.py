@@ -1,4 +1,5 @@
 produto = input('Digite o nome do produto: ')
 
-print(produto.strip())
-print(produto.lower())
+produto_padroa = produto.strip().lower()
+
+print(produto_padroa)

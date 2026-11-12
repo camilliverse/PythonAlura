@@ -3,7 +3,7 @@ permissoes_principais = set(p.strip() for p in input('Permissoções principais:
 #p.strip remove espaçõs do incio ao fim.
 permissoes_solicitadas = set(p.strip() for p in input('Permissoções solicitadas: ').lower().split(','))
 
-subconjunto = permissoes_solicitadas.issubset(permissoes_principais)
+subconjunto = permissoes_solicitadas.issubset(permissoes_principais) #issubset verifica se um subconjunto é conjunto de outro
 
 if subconjunto:
     print(f'Permissoes solicitadas fazem parte das permissoes principais {permissoes_principais}')
